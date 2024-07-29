@@ -9,7 +9,7 @@ import openpyxl
 import docx
 
 
-tabela_teste = pd.read_excel('C:\sistemas\ExcelToWord\PastaTeste.xlsx', 'Planilha1')
+tabela_teste = pd.read_excel('./PastaTeste.xlsx', 'Planilha1')
 doc = docx.Document('./PastaTeste.docx')
 
 
@@ -30,5 +30,5 @@ for i in range(tabela_teste.shape[0]):
     for j in range(tabela_teste.shape[-1]):
         tab.cell(i+1,j).text = str(tabela_teste.values[i,j])    
     
-doc.save('./PastaTeste.docx')
+doc.save('./PastaTeste1.docx')
         
